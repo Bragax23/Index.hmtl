@@ -69,6 +69,7 @@ function verificarLetra(letra, btn) {
         pontos += 10;
     } else {
         erros++;
+        document.getElementById('imagemForca').src = `forca${erros}.png`;
         pontos = Math.max(0, pontos - 5);
         document.getElementById('forca-desenho').innerText = `Erros: ${erros}`;
         if (erros >= 6) {
